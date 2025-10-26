@@ -11,6 +11,7 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
+import { Notepad } from "@/components/notepad";
 import { useQuery, useMutation, useQueryClient } from "@tanstack/react-query";
 import { apiRequest } from "@/lib/queryClient";
 import { 
@@ -634,6 +635,17 @@ export default function Home() {
               ))}
             </div>
           )}
+        </div>
+
+        {/* Workspace Tools */}
+        <div className="mt-12 space-y-6">
+          <div className="space-y-2">
+            <h2 className="text-2xl font-bold text-foreground">Workspace Tools</h2>
+            <p className="text-sm text-muted-foreground">
+              Keep track of deployment notes, content ideas, and quick todos without leaving the dashboard.
+            </p>
+          </div>
+          <Notepad />
         </div>
 
         {/* Instructions Section */}
